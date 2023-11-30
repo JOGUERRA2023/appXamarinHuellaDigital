@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="appXamarinHuellaDigital.App">
+    <Application.Resources>
+        <Color x:Key="PrimaryColor">#002451</Color>
+        <Color x:Key="SecondaryColor">#00346E</Color>
+        <Color x:Key="EntryColor">White</Color>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest" Value="{OnIdiom Tablet=250, Desktop=250, Default=150}"/>
+            <Setter Property="HeightRequest" Value="{OnIdiom Tablet=60, Desktop=60, Default=50}"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="{OnIdiom Tablet=20, Desktop=20, Default=16}"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+            <Setter Property="CornerRadius" Value="{OnIdiom Tablet=30, Desktop=30, Default=25}"/>
+        </Style>
+        <Style TargetType="ImageButton">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+        </Style>
+        <Style x:Key="EntryFrame" TargetType="Frame">
+            <Setter Property="HasShadow" Value="False"/>
+            <Setter Property="HeightRequest" Value="{OnIdiom Tablet=50, Desktop=50, Default=45}"/>
+            <Setter Property="Padding" Value="15,0"/>
+            <Setter Property="CornerRadius" Value="{OnIdiom Tablet=25, Desktop=25, Default=22}"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource EntryColor}"/>
+            <Setter Property="BorderColor" Value="{DynamicResource EntryColor}"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+        </Style>
+    </Application.Resources>
+</Application>

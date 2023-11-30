@@ -1,0 +1,16 @@
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\bin\Debug\netstandard2.0\appIndentidad.deps.json
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\bin\Debug\netstandard2.0\appIndentidad.dll
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\bin\Debug\netstandard2.0\appIndentidad.pdb
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.csproj.AssemblyReference.cache
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\View\UserAdd.xaml.g.cs
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.AssemblyInfoInputs.cache
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.AssemblyInfo.cs
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.csproj.CoreCompileInputs.cache
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\XamlC.stamp
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.dll
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\refint\appIndentidad.dll
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\appIndentidad.pdb
+D:\2023\XMARIN\appIndentidad\appIndentidad\appIndentidad\obj\Debug\netstandard2.0\ref\appIndentidad.dll

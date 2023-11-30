@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:extensions="http://xamarin.com/schemas/2020/toolkit" xmlns:vm="clr-namespace:appXamarinHuellaDigital.ViewModels"
+             xmlns:animations="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+             x:Class="appXamarinHuellaDigital.View.UserAdd">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <extensions:MediaElement x:Name="BgVideo" Source="ms-appx:///event.mp4" ShowsPlaybackControls="False" 
+                  IsLooping="True" Aspect="AspectFill" AutoPlay="True" 
+                  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Image Source="overlay.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Grid Margin="30,50" VerticalOptions="End">
+            <Grid x:Name="loginView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                  WidthRequest="{OnIdiom Tablet=400, Desktop=400, Default=300}">
+                <StackLayout Spacing="30">
+                    <StackLayout Spacing="15">
+                        <Label Text="Bienvenido" TextColor="White" FontSize="30" HorizontalOptions="Start"/>
+                        <StackLayout Spacing="5">
+                            <Frame Style="{StaticResource EntryFrame}">
+                                <Grid HorizontalOptions="FillAndExpand" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="txtUsuario" Text="{Binding Email}" HorizontalTextAlignment="Center" Focused="txtUsuario_Focused" Unfocused="txtUsuario_Unfocused" Placeholder="Usuario" Keyboard="Email" PlaceholderColor="#666" FontSize="14" TextColor="#666" HorizontalOptions="FillAndExpand"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Spacing="5">
+                            <Frame Style="{StaticResource EntryFrame}">
+                                <Grid x:Name="FrmPassword" HorizontalOptions="FillAndExpand" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button x:Name="PasswordTxt" Clicked="PasswordTxt_Clicked" BackgroundColor="Transparent" TextTransform="None" HorizontalOptions="Center" Text="{Binding ClaveIngresada}" TextColor="#666"/>
+                                    <!--<Entry x:Name="PasswordTxt" Text="{Binding Password}" Focused="PasswordTxt_Focused"  Placeholder="Contraseña" PlaceholderColor="#666" FontSize="14" IsPassword="{Binding IsPassword}" TextColor="Black" HorizontalOptions="FillAndExpand"/>-->
+                                    <ImageButton x:Name="verPassword" Command="{Binding GetVerPassword}" Grid.Column="1"  WidthRequest="15" HeightRequest="15" VerticalOptions="Center" HorizontalOptions="Center"
+                                                 Source="{Binding btnImagePass}">
+                                      
+                                    </ImageButton>
+                                </Grid>
+                            </Frame>
+
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout x:Name="stClaves" IsVisible="False" Opacity="1">
+                        <Frame Grid.Row="1" HasShadow="True" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent" BorderColor="#f1f2f6" CornerRadius="10">
+                            <Grid x:Name="gvBotones" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*">
+                                <Button x:Name="btn1" Grid.Row="0" Grid.Column="0" Text="{Binding Btn1}" WidthRequest="150" Command="{Binding Getbtn1}"/>
+                                <Button x:Name="btn2" Grid.Row="0" Grid.Column="1" Text="{Binding Btn2}"  WidthRequest="150"  Command="{Binding Getbtn2}"/>
+                                <Button x:Name="btn3" Grid.Row="0" Grid.Column="2" Text="{Binding Btn3}"  WidthRequest="150"  Command="{Binding Getbtn3}"/>
+                                <Button x:Name="btn4" Grid.Row="1" Grid.Column="0" Text="{Binding Btn4}"  WidthRequest="150"  Command="{Binding Getbtn4}" />
+                                <Button x:Name="btn5" Grid.Row="1" Grid.Column="1" Text="{Binding Btn5}"  WidthRequest="150"  Command="{Binding Getbtn5}"/>
+                                <Button x:Name="btn6" Grid.Row="1" Grid.Column="2" Text="{Binding Btn6}"  WidthRequest="150"  Command="{Binding Getbtn6}" />
+                                <Button x:Name="btn7" Grid.Row="2" Grid.Column="0" Text="{Binding Btn7}"  WidthRequest="150"  Command="{Binding Getbtn7}" />
+                                <Button x:Name="btn8" Grid.Row="2" Grid.Column="1" Text="{Binding Btn8}"  WidthRequest="150"  Command="{Binding Getbtn8}"/>
+                                <Button x:Name="btn9" Grid.Row="2" Grid.Column="2" Text="{Binding Btn9}"  WidthRequest="150"  Command="{Binding Getbtn9}"/>
+                                <Button x:Name="btn0" Grid.Row="3" Grid.Column="1" Text="{Binding Btn0}" WidthRequest="150"  Command="{Binding Getbtn0}"/>
+                                <Button x:Name="btnClean" Grid.Row="3" Grid.Column="2" Text="x" WidthRequest="150" Command="{Binding GetElimarPassword}"/>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+
+                    <Button Text="Ingresar" TextTransform="None" Command="{Binding LoginCommand}"/>
+                    <StackLayout x:Name="FingerprintView" HorizontalOptions="Center" WidthRequest="100">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding FingerprintCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="fingerprint.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
+                        <Label Text="Iniciar con huella digital" TextColor="White" FontSize="12" Opacity="0.5" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <Label HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="© Team Code 2023" FontSize="{OnIdiom Tablet=15, Desktop=15, Default=13}" TextColor="White"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="appXamarinHuellaDigital.MainPage">
+
+    <StackLayout BackgroundColor="#273c75">
+        <Frame BackgroundColor="#002451" Padding="24" CornerRadius="0">
+            <Label Text="Firma" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout>
+            <local:DrawingView x:Name="drawingView" BackgroundColor="#f5f6fa" ClearOnFinish="False" MultiLineMode="True" HeightRequest="200" DefaultLineColor="Red" DrawingLineCompletedCommand="{Binding DrawCompleted}" />
+            <Button Text="Limpiar" Clicked="Button_Clicked"/>
+            <Image x:Name="theImage" WidthRequest="200" HeightRequest="300" />
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
